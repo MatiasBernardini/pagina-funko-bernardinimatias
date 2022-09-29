@@ -1,7 +1,7 @@
 import React from "react"
-import './Navbar.css'
 import logo from '../../assets/logo funko.png'
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { CartWidget } from "../CartWidget/CartWidget";
+import './Navbar.css'
 
 const Header = () => {
     return(
@@ -14,8 +14,8 @@ const Header = () => {
             <a href="">Categoria 3</a>
             <a href="">Categoria 4</a>
         </nav>
-        <AddShoppingCartIcon sx={{ fontSize: 40 }}/>
 
+        <CartWidget />
        </header>
     )
 }
