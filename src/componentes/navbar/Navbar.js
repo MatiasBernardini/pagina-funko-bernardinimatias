@@ -1,5 +1,5 @@
 import React from "react"
-import './Header.css'
+import './Navbar.css'
 import logo from '../../assets/logo funko.png'
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
