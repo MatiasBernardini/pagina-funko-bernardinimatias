@@ -9,10 +9,9 @@ const Header = () => {
         <img src={logo} alt="logoPagina" />
         <h2>Funko Shop</h2>
         <nav>
-            <a href="">Categoria 1</a>
-            <a href="">Categoria 2</a>
-            <a href="">Categoria 3</a>
-            <a href="">Categoria 4</a>
+            <a href="">Productos</a>
+            <a href="">Registrate</a>
+            <a href="">Conocenos</a>
         </nav>
 
         <CartWidget />

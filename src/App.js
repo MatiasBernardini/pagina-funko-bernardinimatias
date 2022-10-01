@@ -1,11 +1,15 @@
 import React from "react";
 import "./App.css";
-import Header from './componentes/Navbar/Navbar'
+import Navbar from './componentes/Navbar/Navbar'
+import { ItemListContainer } from './Containers/ItemListContainer'
 
 const App = () => {
+  const mensaje = "¡Bienvenidos a la página número 1 de ventas de Funko-Pop en el país!"
+
   return (
    <>
-      <Header /> 
+      <Navbar /> 
+      <ItemListContainer greeting={mensaje}/>
    </>
   );
 }
