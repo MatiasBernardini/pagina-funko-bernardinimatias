@@ -1,6 +1,11 @@
-p{
+h3{
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: large;
+}
+
+p{
+    display: flex;
+    justify-content: center;
 }

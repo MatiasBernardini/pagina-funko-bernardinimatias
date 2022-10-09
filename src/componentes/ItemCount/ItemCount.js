@@ -29,3 +29,6 @@ const ItemCount = ({stock, initial, onAdd}) => {
 };
 
 export default ItemCount 
+
+/* <p>{mansaje}</p>
+<ItemCount stock={10} initial={1} onAdd={onAdd}/> */
