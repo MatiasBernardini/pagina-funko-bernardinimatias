@@ -12,7 +12,6 @@ const obtenerProductos = new Promise((resolve, reject)=>{
   setTimeout(() => {
     resolve(productos);
   }, 2000);
-  //reject("ocurrio un error en la promesa")
 })
 
 export const ItemListContainer = ({ greeting }) => {
