@@ -3,11 +3,11 @@ import Item from '../Item/Item';
 
 const ItemList = ({ list }) => {
   return (
-    <ul>
+    <div>
       {list.map((productos) => (
         <Item productos={productos} key={productos.id} />
       ))}
-    </ul>
+    </div>
   );
 };
 
