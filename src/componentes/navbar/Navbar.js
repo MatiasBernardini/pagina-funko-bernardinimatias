@@ -5,8 +5,8 @@ import './Navbar.css'
 
 const Header = () => {
     return(
-       <header>
-        <img src={logo} alt="logoPagina" />
+       <header className="header">
+        <img className="imgNavbar" src={logo} alt="logoPagina" />
         <h2>Funko Shop</h2>
         <nav>
             <a href="">Productos</a>

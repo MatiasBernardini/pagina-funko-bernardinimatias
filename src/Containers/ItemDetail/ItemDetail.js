@@ -13,7 +13,7 @@ export const ItemDetail = ({item}) => {
           <div className="card-detail">
             <h2>{item.title}</h2>
             <div className="card-detail-left">
-                <img src={item.image} alt={item.title} className="img" />
+                <img src={item.image} alt={item.title} className="imagenDetail" />
             </div>
             <div className="card-detail-right">
                 <p>{item.description}</p>

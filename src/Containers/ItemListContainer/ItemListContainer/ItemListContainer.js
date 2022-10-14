@@ -3,24 +3,22 @@ import productosData from '../../../data/productosData';
 import ItemList from '../ItemList/ItemList';
 import './ItemListContainer.css';
 
-const ItemListContainer = () => {
-  const [productos, setProductos] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+export const ItemListContainer = () => {
+  const [productList, setProductList] = useState([])
+
+  const getProducts = () => new Promise((resolve, reject) => {
+    setTimeout(()=> resolve(productosData), 2000)
+  })
 
   useEffect(() => {
+    getProducts()
+    .then(productosData => setProductList(productosData))
+    .catch(error => console.error(error))
+  }, [])  
 
-    const getProductosData = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(productosData);
-      }, 2000);
-    });
-
-    getProductosData
-      .then((response) => setProductos(response))
-      .finally(() => setIsLoading(false));
-  }, []);
-
-  return isLoading ? <h2>Cargando...</h2> : <ItemList list={productos} />;
-};
+  return (
+    <ItemList productList={productList} />
+  )
+}
 
 export default ItemListContainer;

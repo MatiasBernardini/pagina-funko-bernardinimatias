@@ -1,0 +1,33 @@
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 25rem;
+    width: 16rem;
+    border: 1.5px solid gray;;
+    border-radius: 10%;
+}
+
+.price {
+    color: rgb(25, 163, 25);
+    font-weight: 700;
+}
+
+.imagenItem {
+    height: 180px;
+    width: 247.45px;
+}
+
+.buttonDetail{
+    height: 60px;
+    border-radius: 5%;
+    background-color: #225dff;
+    color: white;
+    border: solid #225dff;
+}
+
+.buttonDetail:hover {
+    background-color: #0a2a83;
+    border: solid #0a2a83;
+}
