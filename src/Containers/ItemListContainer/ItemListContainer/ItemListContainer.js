@@ -1,7 +1,6 @@
 import React, { useEffect, useState, } from "react";
 import productosData from '../../../data/productosData';
 import ItemList from '../ItemList/ItemList';
-import './ItemListContainer.css';
 
 export const ItemListContainer = () => {
   const [productList, setProductList] = useState([])
