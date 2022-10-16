@@ -7,11 +7,11 @@ const Header = () => {
     return(
        <header className="header">
         <img className="imgNavbar" src={logo} alt="logoPagina" />
-        <h2>Funko Shop</h2>
+        <h2 className="titleNavbar">FunkoArg</h2>
         <nav>
-            <a href="">Productos</a>
-            <a href="">Registrate</a>
-            <a href="">Conocenos</a>
+            <a href="">The lord of the rings</a>
+            <a href="">Jurassic world</a>
+            <a href="">The Mandalorian</a>
         </nav>
 
         <CartWidget />

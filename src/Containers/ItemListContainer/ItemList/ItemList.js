@@ -4,7 +4,7 @@ import Item from '../Item/Item';
 export const ItemList = ({productList}) => {
 
   return (
-    <div style={{display: 'flex', gap: '2rem', justifyContent: 'space-evenly', margin:'30px'}}>
+    <div style={{display: 'flex', gap: '1.5rem', justifyContent: 'space-evenly', margin:'30px'}}>
       {
         productList.map(item => <Item key={item.id} item={item} />)
       }
