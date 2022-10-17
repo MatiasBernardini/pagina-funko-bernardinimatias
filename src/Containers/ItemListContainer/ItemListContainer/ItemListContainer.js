@@ -1,22 +1,37 @@
 import React, { useEffect, useState, } from "react";
 import productosData from '../../../data/productosData';
 import ItemList from '../ItemList/ItemList';
+import { useParams } from 'react-router-dom';
 
 export const ItemListContainer = () => {
   const [productList, setProductList] = useState([])
 
+  const {categoria} = useParams()
+
   const getProducts = () => new Promise((resolve, reject) => {
-    setTimeout(()=> resolve(productosData), 2000)
+    if(categoria) {
+      setTimeout(()=> resolve(productosData.filter(item => item.category === categoria)), 2000)
+    } else {
+      setTimeout(()=> resolve(productosData), 2000)
+    }
   })
 
   useEffect(() => {
     getProducts()
     .then(productosData => setProductList(productosData))
     .catch(error => console.error(error))
-  }, [])  
+    return () => {
+      setProductList([])
+    }
+  }, [categoria])  
 
   return (
-    <ItemList productList={productList} />
+    <>
+      {
+        productList.length ? <ItemList productList={productList} /> : <h3>Cargando...</h3>
+      }
+      
+    </>
   )
 }
 
