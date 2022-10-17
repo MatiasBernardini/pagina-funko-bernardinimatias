@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Navbar from './componentes/Navbar/Navbar'
+import Navbar from './Componentes/Navbar/Navbar'
 import ItemListContainer from './Containers/ItemListContainer/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from "./Containers/ItemDetailContainer/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
