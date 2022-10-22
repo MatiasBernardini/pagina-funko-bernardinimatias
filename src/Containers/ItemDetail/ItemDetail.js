@@ -1,12 +1,15 @@
-import React from "react";
-import Count from "../../Componentes/ItemCount/ItemCount"
-import './ItemDetail.css'
+import React, { useState, useContext }  from "react";
+import Count from "../../Componentes/ItemCount/ItemCount";
+import { Link } from "react-router-dom";
+import './ItemDetail.css';
 
-export const ItemDetail = ({item}) => {
+const ItemDetail = ({item}) => {
+  const [isPressedButton, setIsPressedButton ] = useState (true);
 
-    const onAdd = (quantity) => {
-        console.loog(quantity)
-    }
+  const onAdd = (count) => {
+    console.log ("Se agregaron " + count + "  productos al carrito");
+    setIsPressedButton (false)
+  }
 
   return (
     <article>
@@ -19,7 +22,14 @@ export const ItemDetail = ({item}) => {
                 <p>{item.description}</p>
                 <p className="price">${item.price}</p>
                 <p>Stock: {item.stock}</p>
-                <Count stock={item.stock} initial={0} onAdd={onAdd}/>
+                { isPressedButton ? (
+                  <Count stock={item.stock} initial={1} onAdd={onAdd} />
+                ) : (
+                  <Link to="/Cart">
+                    <button className="buttonFinalizarCompra"> Finalizar Compra </button>
+                  </Link>
+                ) 
+                }
             </div>
         </div>
     </article>

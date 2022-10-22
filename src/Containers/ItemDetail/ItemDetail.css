@@ -8,3 +8,20 @@
     height: 290px;
     width: 367.45px;
 }
+
+.buttonFinalizarCompra{
+    background-color: rgb(25, 163, 25);
+    width: 100%;
+    margin-top: 1rem;
+    color: white;
+    height: 2rem;
+    border-radius: 10%;
+    border: 2px solid gainsboro;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.buttonFinalizarCompra:hover{
+    background-color: rgb(19, 112, 19)  ;
+    color: white;
+}
