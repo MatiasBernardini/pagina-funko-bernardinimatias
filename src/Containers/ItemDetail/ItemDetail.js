@@ -2,14 +2,16 @@ import React, { useState, useContext }  from "react";
 import Count from "../../Componentes/ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 import './ItemDetail.css';
+import { Context } from "../../Context/CartContext";
 
 const ItemDetail = ({item}) => {
   const [isPressedButton, setIsPressedButton ] = useState (true);
+  const { addItem } = useContext(Context);
 
   const onAdd = (count) => {
-    console.log ("Se agregaron " + count + "  productos al carrito");
+    addItem(item, count);
     setIsPressedButton (false)
-  }
+  };
 
   return (
     <article>
