@@ -1,0 +1,35 @@
+.divMensajeCarritoVacio{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.mensajeCarritoVacio{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    background-color: #225dff;
+    border: double 30px white;
+    border-radius: 15px;
+    color: white;
+}
+
+.linkHome{
+    color: white;
+}
+
+.divCarritoConProductos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px;
+}
+
+.imagenProductoCarrito{
+    height: 130px;
+    width: 167.45px;
+}
+
+.textosCarrito{
+    font-weight: bold;
+}
