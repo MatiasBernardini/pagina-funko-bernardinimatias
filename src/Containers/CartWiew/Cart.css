@@ -33,3 +33,35 @@
 .textosCarrito{
     font-weight: bold;
 }
+
+.buttonEliminarProducto{
+    height: 60px;
+    border-radius: 5%;
+    background-color: #fd2b2b;
+    color: white;
+    border: solid #fd2b2b;
+}
+
+.buttonEliminarProducto:hover{
+    background-color: #ff0000;
+    border: solid #ff0000;
+}
+
+.divFinalizarCompra{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttonConfirmarCompra{
+    height: 60px;
+    border-radius: 5%;
+    background-color: #225dff;
+    color: white;
+    border: solid #225dff;
+}
+
+.buttonConfirmarCompra:hover{
+    background-color: #0a2a83;
+    border: solid #0a2a83;
+}

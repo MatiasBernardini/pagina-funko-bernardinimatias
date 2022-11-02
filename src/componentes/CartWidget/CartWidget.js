@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom'
 import "./CartWidget.css"
 
 export const CartWidget = () => {
-    const { qty } = useContext(Context);
+    const { cart, qty } = useContext(Context);
 
-    return(
+    return cart.length > 0 ? (
     <>
         <button className="cartNavbar" >
             <Link to='/cart'><AddShoppingCartIcon color="success" sx={{ fontSize: 40 }}/></Link>
@@ -15,5 +15,7 @@ export const CartWidget = () => {
         </button>
     </>
 
-    )
+    ) : (
+        <></>
+    );
 }

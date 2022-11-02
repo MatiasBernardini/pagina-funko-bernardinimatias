@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./Cart.css"
 
 export const Cart = ({}) => {
-  const { cart } = useContext(Context);
+  const { cart, deleteItem, getTotal } = useContext(Context);
   return (
     <>
       {cart.length === 0 ? (
@@ -18,13 +18,28 @@ export const Cart = ({}) => {
       ) : (
         <>
           {cart.map((Item) => (
-            <div className="divCarritoConProductos">
+            <div key={Item.id} className="divCarritoConProductos">
               <img className="imagenProductoCarrito" src={Item.image} alt="" />
               <p className="textosCarrito">{Item.title}</p>
               <p className="textosCarrito">Precio: {Item.price}</p>
+              <p className="textosCarrito">Cantidad:  {Item.cantidad}</p>
+
+              <button className="buttonEliminarProducto" onClick={() => deleteItem (Item.id)}>
+                Eliminar Producto
+              </button>
             </div>
           ))}
+
+          <div className="divFinalizarCompra">
+            <h3>
+                Precio Total:  {getTotal()}
+            </h3>
+            <button className="buttonConfirmarCompra">
+              Finalizar Compra
+            </button>
+          </div>
         </>
+        
       )}
     </>
   );
