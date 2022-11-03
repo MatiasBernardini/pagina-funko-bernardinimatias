@@ -20,8 +20,8 @@ export const Cart = ({}) => {
           {cart.map((Item) => (
             <div key={Item.id} className="divCarritoConProductos">
               <img className="imagenProductoCarrito" src={Item.image} alt="" />
-              <p className="textosCarrito">{Item.title}</p>
-              <p className="textosCarrito">Precio: {Item.price}</p>
+              <p className="textosCarrito">"{Item.title}"</p>
+              <p className="textosCarrito">Precio: ${Item.price}</p>
               <p className="textosCarrito">Cantidad:  {Item.cantidad}</p>
 
               <button className="buttonEliminarProducto" onClick={() => deleteItem (Item.id)}>
@@ -32,10 +32,10 @@ export const Cart = ({}) => {
 
           <div className="divFinalizarCompra">
             <h3>
-                Precio Total:  {getTotal()}
+                Precio Total: ${getTotal()}
             </h3>
             <button className="buttonConfirmarCompra">
-              Finalizar Compra
+              Confirmar Compra
             </button>
           </div>
         </>
