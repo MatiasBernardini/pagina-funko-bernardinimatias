@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
-import products from "../../data/productosData";
+import { doc, getDoc } from 'firebase/firestore';
+import {db} from "../../firebase/firebase";
 import ItemDetail  from "../ItemDetail/ItemDetail";
 import PacmanLoader from "react-spinners/ClipLoader";
 import { useParams } from 'react-router-dom';
@@ -10,23 +11,28 @@ export const ItemDetailContainer = () => {
 
   const [item, setItem] = useState()
 
-  const getProduct = () => new Promise((resolve, reject) => {
-      setTimeout(()=> resolve(products.find(product => product.id === Number(id))), 2000)
-    })
+  const [load, setLoad] = useState(true)
 
+  const getSelected = async(idItem) => {
+    try {
+      const document = doc (db, "products", idItem)
+      const response = await getDoc (document)
+      const result = {id: response.id, ...response.data()}
+      setItem (result)
+      setLoad (false)
 
-  useEffect(() => {
-    getProduct()
-    .then(response => setItem(response))
-  }, [])
-  
+    } catch (error) {
+      console.log (error)
+    }
+  }
 
-  
+  useEffect (() => {
+    getSelected (id)
+  }, [id])
+
   return (
     <>
-    {
-      item ? <ItemDetail item={item}/> : <PacmanLoader className="loader" color="#225dff" size={100} />
-    }
+      {load ? <PacmanLoader className="loader" color="#225dff" size={100} /> : <ItemDetail  item={item} /> }
   </>
 )
 }
