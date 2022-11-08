@@ -1,0 +1,10 @@
+.divDelCheckout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divDelFormulario{
+    display: flex;
+    flex-direction: column;
+}

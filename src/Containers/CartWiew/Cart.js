@@ -34,9 +34,12 @@ export const Cart = ({}) => {
             <h3>
                 Precio Total: ${getTotal()}
             </h3>
-            <button className="buttonConfirmarCompra">
-              Confirmar Compra
-            </button>
+
+            <Link to='/checkout' >
+              <button className="buttonConfirmarCompra">
+                Confirmar Compra
+              </button>
+            </Link>
           </div>
         </>
         
