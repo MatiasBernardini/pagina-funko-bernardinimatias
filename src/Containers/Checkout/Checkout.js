@@ -21,10 +21,8 @@ const Checkout = () => {
         try {
             const col = collection(db, "ordenes")
             const order = await addDoc(col, data)
-            console.log("OrdenNro:", order)
             setOrderId(order.id)
             clear()
-            console.log( 'data en GeneraterOrden' ,data)
         } catch (error) {
             console.log(error)
         }
@@ -42,8 +40,7 @@ const Checkout = () => {
         const items = cart.map (e=>{return { id:e.id,title:e.title,price:e.price}})
         const dia = new Date()
         const total = getTotal()
-        const data = {buyer, items, dia, total}
-        console.log('data', data)  
+        const data = {buyer, items, dia, total} 
         generateOrder(data)
     }
 
