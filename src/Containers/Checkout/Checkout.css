@@ -1,3 +1,15 @@
+.titleCheckout{
+    background-color: #225dff;
+    display: flex;
+    margin-top: 1rem;
+    color: white;
+    height: 5rem;
+    width: 21rem;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
 .divDelCheckout{
     display: flex;
     flex-direction: column;
@@ -7,4 +19,32 @@
 .divDelFormulario{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    border: 2px solid rgb(25, 163, 25);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.inputFormulario{
+    margin-top: 20px;
+    height: 40px;
+    width: 180px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+input[type=number] { -moz-appearance:textfield; }
+
+.idOrden{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    padding: 15px;
+    background-color: #D3D3D3;
+    border: double 20px white;
+    border-radius: 15px;
+    color: black;
 }

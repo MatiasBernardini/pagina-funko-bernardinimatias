@@ -47,15 +47,15 @@ const Checkout = () => {
     return (
         <>
             <div className="divDelCheckout">
-                <h1>Finalizando Compra</h1>
+                <h1 className="titleCheckout">Finalizando Compra</h1>
                 <hr />
 
                 {!orderId? 
                 
                     (   <div className="divDelFormulario">
-                            <h4>Completar Datos:</h4>
+                            <h2>Completar Datos:</h2>
                             <form onSubmit={handleSubmit}>
-                                <input 
+                                <input className="inputFormulario" 
                                     type="text"
                                     name="Nombre"
                                     placeholder="Nombre"
@@ -64,8 +64,8 @@ const Checkout = () => {
                                 />
                                 <br />
                                 
-                                <input 
-                                    type="text"
+                                <input className="inputFormulario"
+                                    type="email"
                                     name="Email"
                                     placeholder="Email"
                                     value={Email}
@@ -73,8 +73,9 @@ const Checkout = () => {
                                 />
                                 <br />
 
-                                <input 
-                                    type="text"
+                                <input className="inputFormulario"
+                                    type="number"
+                                    min={0}
                                     name="Telefono"
                                     placeholder="Telefono"
                                     value={Telefono}
@@ -85,15 +86,15 @@ const Checkout = () => {
 
                                 <input 
                                 type="submit"
-                                value= "Confirmar Compra"
-                                className="buttonConfirmarCompra" 
+                                value= "Guardar Datos"
+                                className="buttonFinalizarCompra" 
                                 
                                 />
 
                             </form> 
                         </div>)
                     :
-                    <h4>Su Orden de compra es: {orderId}</h4>
+                    <h2 className="idOrden">Su Orden de compra es: "{orderId}"</h2>
                 }
             </div>
 
