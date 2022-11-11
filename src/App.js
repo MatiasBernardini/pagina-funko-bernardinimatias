@@ -9,7 +9,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CustomProvider   } from "./Context/CartContext";
 
 const App = () => {
-  const mensaje = "¡Bienvenidos a la página número 1 de ventas de Funko-Pop en el país!"
 
   return (
    <>
